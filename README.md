@@ -2,6 +2,12 @@
 
 A set of custom radio and checkbox components for Vue.js
 
+### Example
+
+Here is a demo using the styling below:
+
+![demo](https://raw.githubusercontent.com/invokemedia/vue-radio-checkbox/master/demo.gif)
+
 ### Installation
 
 ```
