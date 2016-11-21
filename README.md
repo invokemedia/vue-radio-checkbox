@@ -46,6 +46,16 @@ Full example:
 <radio name="method" id="email-method-check" value="email" label="Email" v-bind:inverted="true" v-bind:checked="false" v-bind:required="true"></radio>
 ```
 
+### Events
+
+Both the `radio` and `checkbox` can emit input events. Those are used like so:
+
+```html
+<checkbox name="subscribe" value="1" label="Newsletter Sign Up" v-on:input="someMethodInYourApp"></checkbox>
+```
+
+This allows you to have things happen when the elements change/update. An example might be having different elements show or hide, or triggering another change on some other property.
+
 ### Styling
 
 ```scss

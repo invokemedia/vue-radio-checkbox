@@ -36,5 +36,10 @@ window.Vue.component('checkbox', {
       default: false
     },
   },
-  template: "<div class=\"custom-checkbox\" v-bind:class=\"{ inverted: inverted }\"><input type=\"checkbox\" v-bind:name=\"name\" v-bind:class=\"className\" v-bind:id=\"id\" v-bind:value=\"value\" v-bind:checked=\"checked\" v-bind:required=\"required\"><label v-bind:for=\"id\">{{ label }}</label></div>"
+  methods: {
+    updateInput: function(event) {
+      this.$emit('input', event.target);
+    }
+  },
+  template: "<div class=\"custom-checkbox\" v-bind:class=\"{ inverted: inverted }\"><input type=\"checkbox\" v-bind:name=\"name\" v-bind:class=\"className\" v-bind:id=\"id\" v-bind:value=\"value\" v-bind:checked=\"checked\" v-bind:required=\"required\" v-on:change=\"updateInput\"><label v-bind:for=\"id\">{{ label }}</label></div>"
 });
