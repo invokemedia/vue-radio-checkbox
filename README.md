@@ -23,13 +23,15 @@ require('vue-radio-checkbox');
 #### Using the checkbox
 
 ```html
-<checkbox name="subscribe" value="1" label="Newsletter Sign Up"></checkbox>
+<checkbox name="subscribe" value="1" label="Newsletter Sign Up" v-model="someBool"></checkbox>
 ```
+
+This will set `someBool` to the state of the `checked` attribute.
 
 Full example:
 
 ```html
-<checkbox name="email_subscribe" id="email-check" className="another-class" value="1" label="Newsletter Sign Up" v-bind:inverted="false" v-bind:checked="false" v-bind:required="true"></checkbox>
+<checkbox name="email_subscribe" id="email-check" className="another-class" value="1" label="Newsletter Sign Up" v-bind:inverted="false" v-model="someBool" v-bind:checked="someBool" v-bind:required="true"></checkbox>
 ```
 
 #### Using the radio
