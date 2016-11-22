@@ -38,8 +38,8 @@ window.Vue.component('radio', {
   },
   methods: {
     updateInput: function(event) {
-      this.$emit('input', event.target);
+      this.$emit('input', event.target.value);
     }
   },
-  template: "<div class=\"custom-radio\" v-bind:class=\"{ inverted: inverted }\"><input type=\"radio\" v-bind:name=\"name\" v-bind:class=\"className\" v-bind:id=\"id\" v-bind:value=\"value\" v-bind:checked=\"checked\" v-bind:required=\"required\" v-on:change=\"updateInput\"><label v-bind:for=\"id\">{{ label }}</label></div>"
+  template: "<div class=\"custom-radio\" v-bind:class=\"{ inverted: inverted }\"><label v-bind:for=\"id\"><input type=\"radio\" v-bind:name=\"name\" v-bind:class=\"className\" v-bind:id=\"id\" v-bind:checked=\"checked\" v-bind:value=\"value\" v-bind:required=\"required\" v-on:change=\"updateInput\">{{ label }}</label></div>"
 });
